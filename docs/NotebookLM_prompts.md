@@ -1,19 +1,25 @@
-# Запити для NotebookLM
+# NotebookLM — фактичне виконання
 
-Назва notebook: `Lab_Klymiuk_10`.
+Notebook створено у Gemini Notebook під назвою **Lab_Klymiuk_10**.
 
-## Джерела, які слід додати
+## Додані джерела
 
-1. https://pandas.pydata.org/docs/user_guide/10min.html
-2. https://docs.github.com/en/repositories/managing-your-repository-settings-and-features/customizing-your-repository/about-readmes
-3. https://support.google.com/googleplay/android-developer/answer/138230?hl=en
+1. [10 minutes to pandas](https://pandas.pydata.org/docs/user_guide/10min.html)
+2. [README проєкту в GitHub](https://raw.githubusercontent.com/klymiuk812/cloud-lab-klymiuk/main/README.md)
+3. [View and analyze your app's ratings and reviews — Play Console Help](https://support.google.com/googleplay/android-developer/answer/138230?hl=en)
 
-## Три запити
+## Виконані запити та перевірка відповідей
 
-1. Використовуючи лише додані джерела, поясни, що таке pandas DataFrame і для чого застосовують `head()` та `describe()`. Після кожного твердження вкажи посилання на джерело.
-2. Використовуючи лише джерело GitHub Docs, склади чек-лист із п'яти пунктів для README навчального репозиторію з notebook і CSV-даними. Не додавай відомостей, яких немає у джерелі.
-3. Використовуючи лише джерело Play Console, поясни, за якими ознаками можна аналізувати відгуки про застосунок. Окремо назви щонайменше дві ознаки, які пов'язані з версією застосунку або оцінкою.
+1. **Pandas.** Запитано пояснення `df.groupby("version")["rating"].mean()` з коротким прикладом. Відповідь NotebookLM правильно розклала вираз на групування, вибір поля й агрегацію; до тверджень додано клікабельні номери-цитати.
+2. **README.** Запитано назви основних розділів README та їхній зв'язок із запуском у Google Colab. Відповідь послалася на опис, структуру репозиторію, інструкцію запуску, дані, результати, висновки й автора; окремо підтвердила роль кнопки Open in Colab.
+3. **Відгуки Play Console.** Запитано, як оцінки й відгуки допомагають визначати проблеми, з фокусом на `Crashes`. Відповідь пов'язала збої з категорією Stability, впливом на рейтинг і пріоритетом виправлення; всі ключові тези мають цитати.
 
-## Перевірка цитати
+## Докази
 
-Твердження для перевірки: сторінка Play Console зазначає, що рейтинг і кількість рейтингів можна аналізувати за версією застосунку. Відкрийте посилання на це твердження у відповіді NotebookLM та звірте його з розділом **Ratings breakdown** першоджерела.
+Справжні скриншоти джерел і відповідей з цитатами збережено в `docs/execution_evidence/`:
+
+- `notebooklm_sources_answer.png`;
+- `notebooklm_googleplay_answer.png`;
+- `notebooklm_completed.png`.
+
+Запити не були прийняті без перевірки: фрагменти коду та твердження зіставлено з документацією і фактичним запуском notebook у Google Colab.
